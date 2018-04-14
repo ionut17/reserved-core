@@ -1,17 +1,3 @@
-%component{
-	display: flex;
-	font-size: 2rem;
-	box-sizing: border-box;
-}
-
-%icon-scale{
-	transform: scale(1.1);
-}
-
-%filter-bright{
-	filter: brightness(105%);
-}
-
 @mixin ahocus(){
 	&:hover, &:focus, &:active{
 		@content;
@@ -32,10 +18,64 @@
 	padding: nth($paddings, $level);
 }
 
+@mixin placeholder-color($color){
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: $color;
+	}
+	&::-moz-placeholder { /* Firefox 19+ */
+		color: $color;
+	}
+	&:-ms-input-placeholder { /* IE 10+ */
+	color: $color;
+	}
+	&:-moz-placeholder { /* Firefox 18- */
+	color: $color;
+	}
+}
+
 @mixin transition(){
 	transition: all 200ms linear;
 }
 
 @mixin shadow($level: 1){
 	box-shadow: unquote(nth($shadows, $level));
+}
+
+%component{
+	display: flex;
+	font-size: 2rem;
+	box-sizing: border-box;
+}
+
+%icon-scale{
+	transform: scale(1.1);
+}
+
+%filter-bright{
+	filter: brightness(105%);
+}
+
+%form-host{
+	display: flex;
+	flex-direction: column;
+}
+
+%form-component{
+	@include placeholder-color($dark-1);
+	@include padding(1);
+	@include shadow(1);
+	display: flex;
+	background-color: $light-1;
+
+	font-family: $font-family-text;
+	font-size: 2rem;
+	font-weight: 400;
+	color: $dark-2;
+
+	width: 100%;
+	height: auto;
+
+	rs-icon{
+		color: $light-3;
+	}
 }
