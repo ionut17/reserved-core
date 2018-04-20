@@ -18,6 +18,13 @@
 	padding: nth($paddings, $level);
 }
 
+@mixin background-image($url){
+	background-image: url(#{$url});
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
 @mixin placeholder-color($color){
 	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 		color: $color;
@@ -78,4 +85,10 @@
 	rs-icon{
 		color: $light-3;
 	}
+}
+
+%accent-bar{
+	width: 30px;
+	height: 5px;
+	background-color: $accent-1;
 }
