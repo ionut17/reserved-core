@@ -6,8 +6,8 @@ export class Reservation extends Item {
 	people: number;
 	clientId: string;
 	restaurantId: string;
-	startTime: Date;
-	endTime: Date;
+	startTime: Date | string;
+	endTime: Date | string;
 	status: ReservationStatus;
 	tables: Array<string>;
 	notes?: string;
