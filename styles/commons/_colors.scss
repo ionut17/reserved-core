@@ -1,14 +1,3 @@
-$accent-1: #ED2024;
-
-$light-1: #FFFFFF;
-$light-2: #f3f3f3;
-$light-3: #BBBCBC;
-
-$dark-1: #585858;
-$dark-2: #1E1E1E;
-
-$background: #ECEFF1;
-
 //Specific colors
 $green-1: #37EE7D;
 $green-2: #1FB789;
@@ -19,9 +8,24 @@ $yellow-2: #F8C071;
 $grey-1: #BBBCBC;
 $grey-2: #969797;
 
+$red-1: #ED2024;
+
+//Theme colors
+$accent-1: $red-1;
+
+$light-1: #FFFFFF;
+$light-2: #f3f3f3;
+$light-3: #BBBCBC;
+
+$dark-1: #585858;
+$dark-2: #1E1E1E;
+
+$background: #ECEFF1;
+
 $gradient-yellow: linear-gradient(to right, $yellow-1, $yellow-2);
 $gradient-green: linear-gradient(to right, $green-1, $green-2);
 $gradient-grey: linear-gradient(to right, $grey-1, $grey-2);
+$gradient-bottom-shadow: linear-gradient(to bottom, rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 100%);
 
 $gradient-stripes: repeating-linear-gradient(
 	45deg,
